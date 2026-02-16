@@ -5,160 +5,189 @@
 <title>Bruno | Portafolio</title>
 
 <style>
+:root {
+  --bg: #2f3e4e;
+  --text: #ecf0f1;
+  --muted: #cfd8dc;
+  --border: rgba(255,255,255,0.15);
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
-  background-color: #2f3e4e;
-  color: #ecf0f1;
-  scroll-behavior: smooth;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 /* Fondo */
 body::before {
   content: "";
   position: fixed;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
-  background-size: 30px 30px;
+  inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
   z-index: -1;
 }
 
-/* NAVBAR */
+/* Navbar */
 .navbar {
   position: sticky;
   top: 0;
-  background: #2f3e4e;
   display: flex;
   justify-content: space-between;
   padding: 20px 60px;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(4px);
 }
 
-.nav-links a {
-  margin-left: 25px;
+.navbar a {
+  color: var(--text);
   text-decoration: none;
-  color: #ecf0f1;
+  margin-left: 24px;
 }
 
-/* SECCIONES */
+/* Secciones */
 section {
-  padding: 80px 20px;
-  max-width: 1000px;
+  padding: 90px 60px;
+  max-width: 1100px;
   margin: auto;
 }
 
-h2 {
-  margin-bottom: 20px;
+section h2 {
+  font-size: 34px;
+  margin-bottom: 30px;
 }
 
-/* HERO */
+/* Hero */
 .hero {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 60px;
+  gap: 70px;
 }
 
-.profile-card img {
-  width: 240px;
-  border-radius: 25px;
+.profile img {
+  width: 230px;
+  border-radius: 24px;
 }
 
-/* TARJETAS */
+.username {
+  color: var(--muted);
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: var(--muted);
+}
+
+/* Cards */
 .card {
-  background: rgba(255,255,255,0.05);
-  padding: 20px;
-  border-radius: 12px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 25px;
   margin-bottom: 20px;
 }
 
-/* GRID PROYECTOS */
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+/* Tecnologías */
+.tech {
+  text-align: center;
 }
 
-/* FOOTER */
-.footer {
+/* Footer */
+footer {
   text-align: center;
   padding: 40px;
-  border-top: 1px solid rgba(255,255,255,0.2);
+  border-top: 1px solid var(--border);
+  color: var(--muted);
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <div class="navbar">
-  <div><strong>Bruno</strong></div>
-  <div class="nav-links">
-    <a href="#about">Sobre mí</a>
-    <a href="#projects">Proyectos</a>
-    <a href="#experience">Experiencia</a>
-    <a href="#contact">Contacto</a>
+  <strong>Bruno</strong>
+  <div>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#contacto">Contacto</a>
   </div>
 </div>
 
 <!-- HERO -->
 <section class="hero">
-  <div class="profile-card">
+  <div class="profile">
     <img src="foto.jpg">
     <p><strong>Bruno</strong></p>
-    <p>@brunopc26</p>
+    <p class="username">@brunopc26</p>
   </div>
 
   <div>
     <h1>Hola, yo soy Bruno.</h1>
-    <p>Actuario · Data Science · Python</p>
+    <p class="subtitle">Actuario · Data Science · Python</p>
     <p>Ciudad de México</p>
+
+    <p style="max-width:520px;margin-top:20px;">
+      Estudiante de Actuaría interesado en ciencia de datos,
+      programación y modelado matemático. Me gusta construir
+      proyectos que conecten teoría, código y problemas reales.
+    </p>
   </div>
 </section>
 
 <!-- SOBRE MI -->
-<section id="about">
+<section id="sobre-mi">
   <h2>Sobre mí</h2>
   <div class="card">
-    Aquí irá tu historia profesional, intereses y enfoque.
+    (Aquí irá tu historia profesional, enfoque, intereses y objetivos)
   </div>
 </section>
 
 <!-- PROYECTOS -->
-<section id="projects">
+<section id="proyectos">
   <h2>Proyectos</h2>
-  <div class="projects">
-    <div class="card">Proyecto 1</div>
-    <div class="card">Proyecto 2</div>
-    <div class="card">Proyecto 3</div>
+  <div class="card">
+    Proyecto 1 – Descripción breve
+  </div>
+  <div class="card">
+    Proyecto 2 – Descripción breve
   </div>
 </section>
 
 <!-- EXPERIENCIA -->
-<section id="experience">
-  <h2>Experiencia</h2>
-  <div class="card">Experiencia o comunidad</div>
+<section id="experiencia">
+  <h2>Experiencia & Formación</h2>
+  <div class="card">
+    Actuaría – UNAM  
+    <br>Enfoque en datos, estadística y programación
+  </div>
 </section>
 
-<!-- TECNOLOGIAS -->
+<!-- TECNOLOGÍAS -->
 <section>
   <h2>Tecnologías</h2>
-  <img src="https://skillicons.dev/icons?i=python,git,github,linux,vscode,anaconda" />
+  <div class="tech">
+    <img src="https://skillicons.dev/icons?i=python,r,git,github,linux,vscode" />
+  </div>
 </section>
 
 <!-- CONTACTO -->
-<section id="contact">
+<section id="contacto">
   <h2>Contacto</h2>
   <div class="card">
     GitHub · LinkedIn · Email
   </div>
 </section>
 
-<div class="footer">
+<footer>
   © 2026 Bruno
-</div>
+</footer>
 
 </body>
 </html>
-
-
