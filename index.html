@@ -19,6 +19,25 @@ body {
   color: var(--text);
 }
 
+.intereses {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.interes {
+  text-align: center;
+  flex: 1;
+}
+
+.interes img {
+  width: 100%;
+  border-radius: 14px;
+  height: 160px;
+  object-fit: cover;
+}
+
+
 /* Fondo */
 body::before {
   content: "";
@@ -144,10 +163,40 @@ footer {
 <!-- SOBRE MI -->
 <section id="sobre-mi">
   <h2>Sobre mí</h2>
+
   <div class="card">
-    (Aquí irá tu historia profesional, enfoque, intereses y objetivos)
+    <p>
+      Soy estudiante de Actuaría con interés en ciencia de datos,
+      modelado matemático y programación. Disfruto aprender nuevas
+      herramientas tecnológicas y aplicarlas para entender fenómenos
+      del mundo real.
+    </p>
+
+    <p>
+      Fuera del ámbito académico, me interesa explorar ideas,
+      aprender de distintas disciplinas y desarrollar proyectos
+      personales que mezclen creatividad y lógica.
+    </p>
+  </div>
+
+  <div class="intereses">
+    <div class="interes">
+      <img src="interes1.jpg">
+      <p>Lectura y aprendizaje autodidacta</p>
+    </div>
+
+    <div class="interes">
+      <img src="interes2.jpg">
+      <p>Matemáticas y resolución de problemas</p>
+    </div>
+
+    <div class="interes">
+      <img src="interes3.jpg">
+      <p>Explorar tecnología y programación</p>
+    </div>
   </div>
 </section>
+
 
 <!-- PROYECTOS -->
 <section id="proyectos">
